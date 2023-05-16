@@ -205,3 +205,10 @@ nav {
 .operation--close {
   background-image: linear-gradient(to top left, #e52a5a, #ff585f);
 }
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #333;
+}
