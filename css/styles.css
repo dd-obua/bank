@@ -186,3 +186,10 @@ nav {
   font-weight: 400;
   cursor: pointer;
 }
+
+/* Operation */
+.operation {
+  border-radius: 1rem;
+  padding: 2.5rem 3.5rem;
+  color: #333;
+}
