@@ -55,3 +55,7 @@ nav {
   outline: none;
   border: 1px solid #ccc;
 }
+
+.login__input::placeholder{
+  color:#bbb;
+}
