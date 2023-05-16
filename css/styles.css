@@ -70,6 +70,10 @@ nav {
   transition: all 0.3s;
 }
 
+.login__btn:focus {
+  outline: none;
+}
+
 /* main */
 .app {
   position: relative;
