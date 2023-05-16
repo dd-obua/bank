@@ -147,3 +147,12 @@ nav {
   font-size: 1.7rem;
   margin-left: auto;
 }
+
+/* Summary */
+.summary {
+  grid-row: 5/6;
+  display: flex;
+  align-items: baseline;
+  padding: 0 0.3rem;
+  margin-top: 1rem;
+}
