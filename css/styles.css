@@ -51,7 +51,8 @@ nav {
   transition: all 0.3s;
 }
 
-.login__input:hover {
+.login__input:hover,
+.login__input:focus {
   outline: none;
   border: 1px solid #ccc;
 }
@@ -271,6 +272,6 @@ h2 {
   font-size: 1.25rem;
 }
 
-.timer{
+.timer {
   font-weight: 600;
 }
