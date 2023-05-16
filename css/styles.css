@@ -87,3 +87,9 @@ nav {
   align-items: flex-end;
   margin-bottom: 2rem;
 }
+
+.balance__label {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: -0.2rem;
+}
