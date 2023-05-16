@@ -193,3 +193,7 @@ nav {
   padding: 2.5rem 3.5rem;
   color: #333;
 }
+
+.operation--transfers {
+  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+}
