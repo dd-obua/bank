@@ -93,3 +93,8 @@ nav {
   font-weight: 500;
   margin-bottom: -0.2rem;
 }
+
+.balance__date {
+  font-size: 1.4rem;
+  color: #888;
+}
