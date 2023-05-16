@@ -239,3 +239,8 @@ h2 {
   padding: 0.3 1rem;
   transition: all 0.3s;
 }
+
+.form__input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.6);
+}
