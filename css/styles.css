@@ -50,3 +50,8 @@ nav {
   border: 1px solid #fff;
   transition: all 0.3s;
 }
+
+.login__input:hover {
+  outline: none;
+  border: 1px solid #ccc;
+}
