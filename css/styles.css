@@ -177,3 +177,12 @@ nav {
 .summary__value--out {
   color: #f5465d;
 }
+
+.btn--sort {
+  margin-left: auto;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  font-weight: 400;
+  cursor: pointer;
+}
