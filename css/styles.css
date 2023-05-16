@@ -173,3 +173,7 @@ nav {
 .summary__value--interest {
   color: #66c873;
 }
+
+.summary__value--out {
+  color: #f5465d;
+}
