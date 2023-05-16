@@ -86,7 +86,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .balance__label {
