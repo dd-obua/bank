@@ -135,3 +135,6 @@ nav {
   color: #666;
 }
 
+.movements__type--deposit {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
