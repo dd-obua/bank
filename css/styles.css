@@ -201,3 +201,7 @@ nav {
 .operation--loan {
   background-image: linear-gradient(to top left, #39b385, #9be15d);
 }
+
+.operation--close {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
