@@ -9,7 +9,7 @@ const account1 = {
 };
 
 const account2 = {
-  owner: 'Simon Ojok',
+  owner: 'Simon Peter Ojok',
   txns: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interstRate: 1.5,
   pin: 2222,
