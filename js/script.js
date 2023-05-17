@@ -87,3 +87,15 @@ const displayTrxns = function (txns) {
   });
 };
 displayTrxns(account1.txns);
+
+// Create username property and add them account objects
+const createUsernames = function (accs) {
+  return accs.forEach(acc => {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(nm => nm[0])
+      .join('');
+  });
+};
+createUsernames(accounts);
