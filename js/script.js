@@ -67,7 +67,18 @@ const currencies = new Map([
 
 // Display transactions
 const displayTrxns = function (txns) {
-  // Empty transaction container
+  // Empty transactions container
   containerTxns.innerHTML = '';
+
+  txns.forEach(function (txn, i) {
+    // Generate transactions html
+    const txnHtml = `
+     <div class="txns__row">
+      <div class="txns__type txns__type--withdrawal">1 withdrawal</div>
+      <div class="txns__date">24/01/2023</div>
+      <div class="txns__value">-378€</div>
+    </div>
+    `;
+  });
 };
 displayTrxns(account1.txns);
