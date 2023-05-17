@@ -76,7 +76,7 @@ const displayTrxns = function (txns) {
      <div class="txns__row">
       <div class="txns__type txns__type--withdrawal">${i + 1} withdrawal</div>
       <div class="txns__date">24/01/2023</div>
-      <div class="txns__value">-378€</div>
+      <div class="txns__value">${txn}</div>
     </div>
     `;
 
