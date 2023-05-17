@@ -90,7 +90,7 @@ displayTrxns(account1.txns);
 
 // Create username property and add them account objects
 const createUsernames = function (accs) {
-  return accs.forEach(acc => {
+  return accs.forEach(function (acc) {
     acc.username = acc.owner
       .toLowerCase()
       .split(' ')
