@@ -58,3 +58,9 @@ const inputTransferAmount = select('.form__input--amount');
 const inputLoanAmount = select('.form__input--loan-amount');
 const inputCloseUsername = select('.form__input--user');
 const inputClosePin = select('.form__input--pin');
+
+const currencies = new Map([
+  ['USD', 'United States Dollars'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound Sterling'],
+]);
