@@ -41,3 +41,6 @@ const labelSumIn = select('.summary__value--in');
 const labelSumOut = select('.summary__value--out');
 const labelSumInterest = select('.summary__value--interest');
 const labelTimer = select('.timer');
+
+const containerApp = select('.app');
+const containerMovements = select('.movements');
