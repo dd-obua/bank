@@ -32,3 +32,12 @@ const account4 = {
 const accounts = [account1, account2, account3, account4];
 
 const select = selector => document.querySelector(selector);
+
+// Elements
+const labelWelcome = select('.welcome');
+const labelDate = select('.date');
+const labelBalance = select('.balance__value');
+const labelSumIn = select('.summary__value--in');
+const labelSumOut = select('.summary__value--out');
+const labelSumInterest = select('.summary__value--interest');
+const labelTimer = select('.timer');
