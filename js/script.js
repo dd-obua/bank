@@ -44,3 +44,9 @@ const labelTimer = select('.timer');
 
 const containerApp = select('.app');
 const containerMovements = select('.movements');
+
+const btnLogin = select('.login__btn');
+const btnTransfer = select('.form__btn--transfer');
+const btnLoan = select('.form__btn--loan');
+const btnClose = select('.form__btn--close');
+const btnSort = select('.btn--sort');
