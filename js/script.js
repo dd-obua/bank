@@ -50,3 +50,11 @@ const btnTransfer = select('.form__btn--transfer');
 const btnLoan = select('.form__btn--loan');
 const btnClose = select('.form__btn--close');
 const btnSort = select('.btn--sort');
+
+const inputLoginUsername = select('.login__input--user');
+const inputLoginPin = select('.login__input--pin');
+const inputTransferTo = select('.form__input---to');
+const inputTransferAmount = select('.form__input--amount');
+const inputLoanAmount = select('.form__input--loan-amount');
+const inputCloseUsername = select('.form__input--user');
+const inputClosePin = select('.form__input--pin');
