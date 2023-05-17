@@ -30,3 +30,5 @@ const account4 = {
 };
 
 const accounts = [account1, account2, account3, account4];
+
+const select = selector => document.querySelector(selector);
