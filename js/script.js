@@ -64,3 +64,10 @@ const currencies = new Map([
   ['EUR', 'Euro'],
   ['GBP', 'Pound Sterling'],
 ]);
+
+// Display transactions
+const displayTrxns = function (txns) {
+  // Empty transaction container
+  containerTxns.innerHTML = '';
+};
+displayTrxns(account1.txns);
