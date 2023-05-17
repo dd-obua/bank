@@ -79,6 +79,9 @@ const displayTrxns = function (txns) {
       <div class="txns__value">-378€</div>
     </div>
     `;
+
+    // Attach transactions html to transaction container
+    containerTxns.insertAdjacentHTML('afterbegin', txnHtml);
   });
 };
 displayTrxns(account1.txns);
