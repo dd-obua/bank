@@ -106,6 +106,11 @@ const displaySummaries = function (txns) {
     .filter(txn => txn < 0)
     .reduce((acc, out) => acc + out, 0);
   labelSumOut.textContent = `${Math.abs(totalOut)}€`;
+
+  const interest = txns
+    .filter(txn => txn > 0)
+    .map(dep => (dep * 1.2) / 100)
+    .reduce((acc, int) => acc + int, 0);
 };
 displaySummaries(account1.txns);
 
