@@ -107,6 +107,7 @@ const displaySummaries = function (txns) {
     .reduce((acc, out) => acc + out, 0);
   labelSumOut.textContent = `${Math.abs(totalOut)}€`;
 
+  // Interest (1.2% of each deposit)
   const interest = txns
     .filter(txn => txn > 0)
     .map(dep => (dep * 1.2) / 100)
