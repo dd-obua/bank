@@ -111,6 +111,7 @@ const displaySummaries = function (txns) {
   const interest = txns
     .filter(txn => txn > 0)
     .map(dep => (dep * 1.2) / 100)
+    .filter(int => int >= 1)
     .reduce((acc, int) => acc + int, 0);
   labelSumInterest.textContent = `${interest}€`;
 };
