@@ -105,6 +105,7 @@ const displaySummaries = function (txns) {
   const totalOut = txns
     .filter(txn => txn < 0)
     .reduce((acc, txn) => acc + txn, 0);
+  labelSumOut.textContent = `${Math.abs(totalOut)}€`;
 };
 displaySummaries(account1.txns);
 
