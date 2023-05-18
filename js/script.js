@@ -99,7 +99,7 @@ displayBalance(account1.txns);
 const displaySummaries = function (txns) {
   const totalIncome = txns
     .filter(txn => txn > 0)
-    .reduce((acc, txn) => acc + txn, 0);
+    .reduce((acc, deposit) => acc + deposit, 0);
   labelSumIn.textContent = `${totalIncome}€`;
 
   const totalOut = txns
