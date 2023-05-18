@@ -101,6 +101,10 @@ const displaySummaries = function (txns) {
     .filter(txn => txn > 0)
     .reduce((acc, txn) => acc + txn, 0);
   labelSumIn.textContent = `${totalIncome}€`;
+
+  const totalOut = txns
+    .filter(txn => txn < 0)
+    .reduce((acc, txn) => acc + txn, 0);
 };
 displaySummaries(account1.txns);
 
