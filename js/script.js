@@ -88,6 +88,13 @@ const displayTrxns = function (txns) {
 };
 displayTrxns(account1.txns);
 
+// Calculate and display balance
+const displayBalance = function (txns) {
+  const balance = txns.reduce((acc, txn) => acc + txn, 0);
+  labelBalance.textContent = `${balance}€`;
+};
+displayBalance(account1.txns);
+
 // Create username property and add them account objects
 const createUsernames = function (accs) {
   return accs.forEach(function (acc) {
