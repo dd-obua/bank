@@ -78,7 +78,7 @@ const displayTrxns = function (txns) {
       <div class="txns__row">
         <div class="txns__type txns__type--${type}">${i + 1} ${type}</div>
         <div class="txns__date">24/01/2023</div>
-        <div class="txns__value">${txn}</div>
+        <div class="txns__value">${txn}€</div>
       </div>
     `;
 
