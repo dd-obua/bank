@@ -95,6 +95,14 @@ const displayBalance = function (txns) {
 };
 displayBalance(account1.txns);
 
+// Calculate and display summaries
+const displaySummaries = function (txns) {
+  const totalIncome = txns
+    .filter(txn => txn > 0)
+    .reduce((acc, txn) => acc + txn, 0);
+};
+displaySummaries(account1.txns);
+
 // Create username property and add them account objects
 const createUsernames = function (accs) {
   return accs.forEach(function (acc) {
