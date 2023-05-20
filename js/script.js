@@ -113,7 +113,6 @@ const displaySummaries = function (txns) {
     .reduce((acc, int) => acc + int, 0);
   labelSumInterest.textContent = `${interest}€`;
 };
-displaySummaries(account1.txns);
 
 // Create username property and add them account objects
 const createUsernames = accs =>
@@ -150,5 +149,6 @@ btnLogin.addEventListener('click', function (e) {
     displayBalance(activeAccount.txns);
 
     // Display summary
+    displaySummaries(activeAccount.txns);
   }
 });
