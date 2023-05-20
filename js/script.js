@@ -92,27 +92,27 @@ const displayTrxns = function (txns) {
 //   const balance = txns.reduce((acc, txn) => acc + txn, 0);
 //   labelBalance.textContent = `${balance}€`;
 // };
-const displayBalance = function (account) {
-  account.balance = account.txns.reduce((acc, txn) => acc + txn, 0);
-  labelBalance.textContent = `${account.balance}€`;
+const displayBalance = function (acct) {
+  acct.balance = acct.txns.reduce((acc, txn) => acc + txn, 0);
+  labelBalance.textContent = `${acct.balance}€`;
 };
 
 // Calculate and display summaries
-const displaySummaries = function (account) {
-  const totalIncome = account.txns
+const displaySummaries = function (acct) {
+  const totalIncome = acct.txns
     .filter(txn => txn > 0)
     .reduce((acc, deposit) => acc + deposit, 0);
   labelSumIn.textContent = `${totalIncome}€`;
 
-  const totalOut = account.txns
+  const totalOut = acct.txns
     .filter(txn => txn < 0)
     .reduce((acc, out) => acc + out, 0);
   labelSumOut.textContent = `${Math.abs(totalOut)}€`;
 
   // Interest (1.2% of each deposit) - paid only if it is at least 1€
-  const interest = account.txns
+  const interest = acct.txns
     .filter(txn => txn > 0)
-    .map(dep => (dep * account.interstRate) / 100)
+    .map(dep => (dep * acct.interstRate) / 100)
     .filter(int => int >= 1)
     .reduce((acc, int) => acc + int, 0);
   labelSumInterest.textContent = `${interest}€`;
