@@ -159,5 +159,7 @@ btnLogin.addEventListener('click', function (e) {
   // Transfer funds
   btnTransfer.addEventListener('click', function (e) {
     e.preventDefault();
+
+    const amount = Number(inputTransferAmount.value);
   });
 });
