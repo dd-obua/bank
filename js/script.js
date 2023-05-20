@@ -1,6 +1,7 @@
 'use strict';
 
 // Create accounts
+
 const account1 = {
   owner: 'Abasa Wandega',
   txns: [200, 450, -400, 3000, -650, -130, 70, 1300],
@@ -29,7 +30,14 @@ const account4 = {
   pin: 4444,
 };
 
-const accounts = [account1, account2, account3, account4];
+const account5 = {
+  owner: 'Denis Daniel Obua',
+  txns: [450, 3000, -130, 1300],
+  interstRate: 1.8,
+  pin: 5555,
+};
+
+const accounts = [account1, account2, account3, account4, account5];
 
 const select = selector => document.querySelector(selector);
 
