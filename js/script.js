@@ -203,6 +203,7 @@ btnLogin.addEventListener('click', function (e) {
         acct => acct.username === activeAccount.username
       );
       accounts.splice(currentIndex, 1);
+      inputCloseUsername.value = inputClosePin.value = '';
     }
   });
 });
