@@ -176,6 +176,8 @@ btnLogin.addEventListener('click', function (e) {
       // Transfer fund
       activeAccount.txns.push(-amount);
       receipientAccount.txns.push(amount);
+
+      updateUI(activeAccount);
     }
   });
 });
