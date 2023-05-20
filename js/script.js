@@ -143,7 +143,7 @@ btnLogin.addEventListener('click', function (e) {
   if (activeAccount?.pin === Number(inputLoginPin.value)) {
     // Display welcome message and UI
     labelWelcome.textContent = `Welcome ${activeAccount.owner.split(' ')[0]}!`;
-    containerApp.style.opacity = '1';
+    containerApp.style.opacity = 100;
 
     // Display movements / transactions
     // Display balance
