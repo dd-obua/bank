@@ -130,7 +130,14 @@ const createUsernames = accs =>
 
 createUsernames(accounts);
 
+let activeAccount;
+
 // Create event handlers
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault(); // prevent form from submitting
+
+  activeAccount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
+  console.log(activeAccount);
 });
