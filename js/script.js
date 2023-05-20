@@ -153,5 +153,6 @@ btnLogin.addEventListener('click', function (e) {
     displayBalance(activeAccount.txns);
 
     // Display summary
+    displaySummaries(activeAccount);
   }
 });
