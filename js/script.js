@@ -204,6 +204,10 @@ btnLogin.addEventListener('click', function (e) {
       );
       accounts.splice(currentIndex, 1);
 
+      labelWelcome.textContent = `Hey ${
+        activeAccount.owner.split(' ')[0]
+      }, your account has been closed!`;
+
       // Hide UI
       containerApp.style.opacity = 0;
     }
