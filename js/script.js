@@ -194,5 +194,9 @@ btnLogin.addEventListener('click', function (e) {
   // Close account
   btnClose.addEventListener('click', function (e) {
     e.preventDefault();
+
+    const currentIndex = accounts.findIndex(
+      acct => acct.username === activeAccount.username
+    );
   });
 });
