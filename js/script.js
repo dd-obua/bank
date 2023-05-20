@@ -140,6 +140,6 @@ btnLogin.addEventListener('click', function (e) {
     acc => acc.username === inputLoginUsername.value
   );
 
-  if (activeAccount?.pin === Number(inputLoginPin.value))
-    console.log(`Welcome ${activeAccount.owner}!`);
+  if (activeAccount?.pin === Number(inputLoginPin.value)) {
+  }
 });
