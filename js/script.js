@@ -195,14 +195,13 @@ btnLogin.addEventListener('click', function (e) {
   btnClose.addEventListener('click', function (e) {
     e.preventDefault();
 
-    const currentIndex = accounts.findIndex(
-      acct => acct.username === activeAccount.username
-    );
-
     if (
       inputCloseUsername.value === activeAccount.username &&
       Number(inputClosePin.value) === activeAccount.pin
     ) {
+      const currentIndex = accounts.findIndex(
+        acct => acct.username === activeAccount.username
+      );
     }
   });
 });
