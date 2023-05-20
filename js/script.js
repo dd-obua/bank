@@ -198,5 +198,11 @@ btnLogin.addEventListener('click', function (e) {
     const currentIndex = accounts.findIndex(
       acct => acct.username === activeAccount.username
     );
+
+    if (
+      inputCloseUsername.value === activeAccount.username &&
+      Number(inputClosePin.value) === activeAccount.pin
+    ) {
+    }
   });
 });
