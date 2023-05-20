@@ -155,4 +155,9 @@ btnLogin.addEventListener('click', function (e) {
     // Display summary
     displaySummaries(activeAccount);
   }
+
+  // Transfer funds
+  btnTransfer.addEventListener('click', function (e) {
+    e.preventDefault();
+  });
 });
