@@ -19,7 +19,7 @@ const account3 = {
   owner: 'Wilber Natamba',
   txns: [200, -200, 340, -300, -20, 50, 400, -460],
   interstRate: 0.7,
-  pin: 333,
+  pin: 3333,
 };
 
 const account4 = {
