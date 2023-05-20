@@ -94,6 +94,7 @@ const displayTrxns = function (txns) {
 // };
 const displayBalance = function (account) {
   const balance = account.txns.reduce((acc, txn) => acc + txn, 0);
+  account.balance = balance;
   labelBalance.textContent = `${balance}€`;
 };
 
