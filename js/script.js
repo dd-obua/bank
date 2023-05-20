@@ -202,6 +202,7 @@ btnLogin.addEventListener('click', function (e) {
       const currentIndex = accounts.findIndex(
         acct => acct.username === activeAccount.username
       );
+      accounts.splice(currentIndex, 1);
     }
   });
 });
