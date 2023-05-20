@@ -93,9 +93,8 @@ const displayTrxns = function (txns) {
 //   labelBalance.textContent = `${balance}€`;
 // };
 const displayBalance = function (account) {
-  const balance = account.txns.reduce((acc, txn) => acc + txn, 0);
-  account.balance = balance;
-  labelBalance.textContent = `${balance}€`;
+  account.balance = account.txns.reduce((acc, txn) => acc + txn, 0);
+  labelBalance.textContent = `${account.balance}€`;
 };
 
 // Calculate and display summaries
