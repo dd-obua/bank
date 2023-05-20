@@ -165,6 +165,7 @@ btnLogin.addEventListener('click', function (e) {
     const receipientAccount = accounts.find(
       acc => acc.username === inputTransferTo.value
     );
+    inputTransferTo.value = inputTransferAmount.value = '';
 
     // Set tranfer conditions (positive values only, amount <= balance of the account transfering, transfer to the same account not allowed and that the receipient account exists)
     if (
