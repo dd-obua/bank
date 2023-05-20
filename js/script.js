@@ -176,9 +176,9 @@ btnLogin.addEventListener('click', function (e) {
       activeAccount.txns.push(-amount);
       receipientAccount.txns.push(amount);
 
-      inputTransferTo.value = inputTransferAmount.value = '';
-
       updateUI(activeAccount);
     }
+
+    inputTransferTo.value = inputTransferAmount.value = '';
   });
 });
