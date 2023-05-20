@@ -153,6 +153,8 @@ btnLogin.addEventListener('click', function (e) {
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
     inputLoginPin.blur();
+
+    updateUI(activeAccount);
   }
 
   // Transfer funds
