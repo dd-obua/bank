@@ -195,8 +195,6 @@ btnLogin.addEventListener('click', function (e) {
   btnClose.addEventListener('click', function (e) {
     e.preventDefault();
 
-    inputCloseUsername.value = inputClosePin.value = '';
-
     if (
       inputCloseUsername.value === activeAccount.username &&
       Number(inputClosePin.value) === activeAccount.pin
@@ -210,4 +208,5 @@ btnLogin.addEventListener('click', function (e) {
       containerApp.style.opacity = 0;
     }
   });
+  inputCloseUsername.value = inputClosePin.value = '';
 });
