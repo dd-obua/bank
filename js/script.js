@@ -182,4 +182,9 @@ btnLogin.addEventListener('click', function (e) {
 
     inputTransferTo.value = inputTransferAmount.value = '';
   });
+
+  // Close account
+  btnClose.addEventListener('click', function (e) {
+    e.preventDefault();
+  });
 });
