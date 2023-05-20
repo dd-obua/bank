@@ -128,3 +128,8 @@ const createUsernames = function (accs) {
   });
 };
 createUsernames(accounts);
+
+// Create event handlers
+btnLogin.addEventListener('click', function (e) {
+  e.preventDefault(); // prevent form from submitting
+});
