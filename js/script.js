@@ -139,5 +139,7 @@ btnLogin.addEventListener('click', function (e) {
   activeAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
   );
-  console.log(activeAccount);
+
+  if (activeAccount?.pin === Number(inputLoginPin.value))
+    console.log(`Welcome ${activeAccount.owner}!`);
 });
