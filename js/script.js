@@ -173,7 +173,6 @@ btnLogin.addEventListener('click', function (e) {
       amount <= activeAccount.balance &&
       receipientAccount?.username !== activeAccount.username
     ) {
-      // Transfer fund
       activeAccount.txns.push(-amount);
       receipientAccount.txns.push(amount);
 
