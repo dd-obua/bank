@@ -128,11 +128,15 @@ const createUsernames = accs =>
         .map(nm => nm[0])
         .join(''))
   );
-
 createUsernames(accounts);
 
-let activeAccount;
+const updateUI = function (acct) {
+  displayTrxns(activeAccount.txns);
+  displayBalance(activeAccount);
+  displaySummaries(activeAccount);
+};
 
+let activeAccount;
 // Create event handlers
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault(); // prevent form from submitting
@@ -149,15 +153,6 @@ btnLogin.addEventListener('click', function (e) {
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
     inputLoginPin.blur();
-
-    // Display movements / transactions
-    displayTrxns(activeAccount.txns);
-
-    // Display balance
-    displayBalance(activeAccount);
-
-    // Display summary
-    displaySummaries(activeAccount);
   }
 
   // Transfer funds
