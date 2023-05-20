@@ -142,6 +142,9 @@ btnLogin.addEventListener('click', function (e) {
     labelWelcome.textContent = `Welcome ${activeAccount.owner.split(' ')[0]}!`;
     containerApp.style.opacity = 100;
 
+    // Clear input fields
+    inputLoginUsername.value = inputLoginPin.value = '';
+
     // Display movements / transactions
     displayTrxns(activeAccount.txns);
 
