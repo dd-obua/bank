@@ -154,7 +154,7 @@ btnLogin.addEventListener('click', function (e) {
     displayTrxns(activeAccount.txns);
 
     // Display balance
-    displayBalance(activeAccount.txns);
+    displayBalance(activeAccount);
 
     // Display summary
     displaySummaries(activeAccount);
@@ -169,9 +169,4 @@ btnLogin.addEventListener('click', function (e) {
       acc => acc.username === inputTransferTo.value
     );
   });
-  // Check if amount to be transfered is a positive value and that the transfer is possible
-  if (amount > 0) {
-  }
-  // receipientAccount.txns.push(amount);
-  // activeAccount.txns.push(-amount);
 });
