@@ -169,11 +169,12 @@ btnLogin.addEventListener('click', function (e) {
       acc => acc.username === inputTransferTo.value
     );
 
-    // Set tranfer conditions (positive values only, amount <= balance of the account transfering, transfer to the same account not allowed)
+    // Set tranfer conditions (positive values only, amount <= balance of the account transfering, transfer to the same account not allowed and that the receipient account exists)
     if (
+      receipientAccount &&
       amount > 0 &&
       amount <= activeAccount.balance &&
-      receipientAccount.username !== activeAccount.username
+      receipientAccount?.username !== activeAccount.username
     ) {
     }
   });
