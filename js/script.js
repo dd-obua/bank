@@ -94,21 +94,21 @@ const displayBalance = function (txns) {
 };
 
 // Calculate and display summaries
-const displaySummaries = function (txns) {
-  const totalIncome = txns
+const displaySummaries = function (account) {
+  const totalIncome = account.txns
     .filter(txn => txn > 0)
     .reduce((acc, deposit) => acc + deposit, 0);
   labelSumIn.textContent = `${totalIncome}€`;
 
-  const totalOut = txns
+  const totalOut = account.txns
     .filter(txn => txn < 0)
     .reduce((acc, out) => acc + out, 0);
   labelSumOut.textContent = `${Math.abs(totalOut)}€`;
 
   // Interest (1.2% of each deposit) - paid only if it is at least 1€
-  const interest = txns
+  const interest = account.txns
     .filter(txn => txn > 0)
-    .map(dep => (dep * 1.2) / 100)
+    .map(dep => (dep * account.interstRate) / 100)
     .filter(int => int >= 1)
     .reduce((acc, int) => acc + int, 0);
   labelSumInterest.textContent = `${interest}€`;
@@ -153,6 +153,5 @@ btnLogin.addEventListener('click', function (e) {
     displayBalance(activeAccount.txns);
 
     // Display summary
-    displaySummaries(activeAccount.txns);
   }
 });
