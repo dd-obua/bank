@@ -92,7 +92,6 @@ const displayBalance = function (txns) {
   const balance = txns.reduce((acc, txn) => acc + txn, 0);
   labelBalance.textContent = `${balance}€`;
 };
-displayBalance(account1.txns);
 
 // Calculate and display summaries
 const displaySummaries = function (txns) {
@@ -148,6 +147,8 @@ btnLogin.addEventListener('click', function (e) {
     displayTrxns(activeAccount.txns);
 
     // Display balance
+    displayBalance(activeAccount.txns);
+
     // Display summary
   }
 });
