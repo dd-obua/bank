@@ -86,7 +86,6 @@ const displayTrxns = function (txns) {
     containerTxns.insertAdjacentHTML('afterbegin', txnHtml);
   });
 };
-displayTrxns(account1.txns);
 
 // Calculate and display balance
 const displayBalance = function (txns) {
@@ -146,6 +145,8 @@ btnLogin.addEventListener('click', function (e) {
     containerApp.style.opacity = 100;
 
     // Display movements / transactions
+    displayTrxns(activeAccount.txns);
+
     // Display balance
     // Display summary
   }
