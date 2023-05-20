@@ -137,7 +137,7 @@ const updateUI = function (acct) {
 };
 
 let activeAccount;
-// Create event handlers
+
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault(); // prevent form from submitting
 
