@@ -118,15 +118,16 @@ const displaySummaries = function (txns) {
 displaySummaries(account1.txns);
 
 // Create username property and add them account objects
-const createUsernames = function (accs) {
-  return accs.forEach(function (acc) {
-    acc.username = acc.owner
-      .toLowerCase()
-      .split(' ')
-      .map(nm => nm[0])
-      .join('');
-  });
-};
+const createUsernames = accs =>
+  accs.forEach(
+    acc =>
+      (acc.username = acc.owner
+        .toLowerCase()
+        .split(' ')
+        .map(nm => nm[0])
+        .join(''))
+  );
+
 createUsernames(accounts);
 
 // Create event handlers
