@@ -200,9 +200,11 @@ btnLogin.addEventListener('click', function (e) {
       activeAccount.txns.push(amount);
     }
 
+    inputLoanAmount.value = '';
+    inputLoanAmount.blur();
+
     updateUI(activeAccount);
   });
-
   // Close account
   btnClose.addEventListener('click', function (e) {
     e.preventDefault();
