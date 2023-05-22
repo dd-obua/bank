@@ -231,3 +231,5 @@ btnLogin.addEventListener('click', function (e) {
   });
   inputCloseUsername.value = inputClosePin.value = '';
 });
+
+const sorted = false;
