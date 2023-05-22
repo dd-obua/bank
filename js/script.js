@@ -205,6 +205,7 @@ btnLogin.addEventListener('click', function (e) {
 
     updateUI(activeAccount);
   });
+
   // Close account
   btnClose.addEventListener('click', function (e) {
     e.preventDefault();
