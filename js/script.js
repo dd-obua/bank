@@ -194,6 +194,8 @@ btnLogin.addEventListener('click', function (e) {
   // Take loan
   btnLoan.addEventListener('click', function (e) {
     e.preventDefault();
+
+    const amount = Number(inputLoanAmount.value);
   });
 
   // Close account
