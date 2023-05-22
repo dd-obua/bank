@@ -233,3 +233,9 @@ btnLogin.addEventListener('click', function (e) {
 });
 
 let sorted = false;
+
+btnSort.addEventListener('click', e => {
+  e.preventDefault();
+  displayTrxns(activeAccount.txns, !sorted);
+  sorted = !sorted;
+});
