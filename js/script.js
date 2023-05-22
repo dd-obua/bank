@@ -234,7 +234,7 @@ btnLogin.addEventListener('click', function (e) {
 
 let sorted = false;
 
-btnSort.addEventListener('click', e => {
+btnSort.addEventListener('click', function (e) {
   e.preventDefault();
   displayTrxns(activeAccount.txns, !sorted);
   sorted = !sorted;
