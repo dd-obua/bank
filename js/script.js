@@ -233,3 +233,7 @@ btnLogin.addEventListener('click', function (e) {
 });
 
 const sorted = false;
+
+btnSort.addEventListener('click', e => {
+  e.preventDefault();
+});
