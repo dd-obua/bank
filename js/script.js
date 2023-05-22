@@ -80,7 +80,7 @@ const displayTrxns = function (txns, sort = false) {
 
   const transactions = sort ? txns.slice().sort((a, b) => a - b) : txns;
 
-  txns.forEach(function (txn, i) {
+  transactions.forEach(function (txn, i) {
     const type = txn > 0 ? 'deposit' : 'withdrawal';
 
     // Generate transactions html
