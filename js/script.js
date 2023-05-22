@@ -191,6 +191,11 @@ btnLogin.addEventListener('click', function (e) {
     inputTransferTo.value = inputTransferAmount.value = '';
   });
 
+  // Take loan
+  btnTransfer.addEventListener('click', function (e) {
+    e.preventDefault();
+  });
+
   // Close account
   btnClose.addEventListener('click', function (e) {
     e.preventDefault();
