@@ -192,10 +192,8 @@ btnLogin.addEventListener('click', function (e) {
   });
 
   // Take loan
-  btnTransfer.addEventListener('click', function (e) {
+  btnLoan.addEventListener('click', function (e) {
     e.preventDefault();
-
-    const amount = inputTransferAmount.value;
   });
 
   // Close account
