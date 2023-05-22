@@ -199,6 +199,8 @@ btnLogin.addEventListener('click', function (e) {
     if (amount > 0 && activeAccount.txns.some(txn => txn >= amount * 0.1)) {
       activeAccount.txns.push(amount);
     }
+
+    updateUI(activeAccount);
   });
 
   // Close account
