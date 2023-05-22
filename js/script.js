@@ -78,6 +78,8 @@ const displayTrxns = function (txns, sort = false) {
   // Empty transactions container
   containerTxns.innerHTML = '';
 
+  const txtns = sort ? txns.slice().sort((a, b) => a - b) : txns;
+
   txns.forEach(function (txn, i) {
     const type = txn > 0 ? 'deposit' : 'withdrawal';
 
