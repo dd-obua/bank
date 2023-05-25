@@ -97,11 +97,6 @@ const displayTrxns = function (txns, sort = false) {
   });
 };
 
-// Calculate and display balance
-// const displayBalance = function (txns) {
-//   const balance = txns.reduce((acc, txn) => acc + txn, 0);
-//   labelBalance.textContent = `${balance}€`;
-// };
 const displayBalance = function (acct) {
   acct.balance = acct.txns.reduce((acc, txn) => acc + txn, 0);
   labelBalance.textContent = `${acct.balance}€`;
@@ -155,7 +150,7 @@ btnLogin.addEventListener('click', function (e) {
     acc => acc.username === inputLoginUsername.value
   );
 
-  if (activeAccount?.pin === +inputLoginPin.value) {
+  if (activeAccount?.pin === Number(inputLoginPin.value)) {
     // Display welcome message and UI
     labelWelcome.textContent = `Welcome ${activeAccount.owner.split(' ')[0]}!`;
     containerApp.style.opacity = 100;
@@ -171,7 +166,7 @@ btnLogin.addEventListener('click', function (e) {
   btnTransfer.addEventListener('click', function (e) {
     e.preventDefault();
 
-    const amount = +inputTransferAmount.value;
+    const amount = Number(inputTransferAmount.value);
     const receipientAccount = accounts.find(
       acc => acc.username === inputTransferTo.value
     );
@@ -197,7 +192,7 @@ btnLogin.addEventListener('click', function (e) {
   btnLoan.addEventListener('click', function (e) {
     e.preventDefault();
 
-    const amount = +inputLoanAmount.value;
+    const amount = Number(inputLoanAmount.value);
     if (amount > 0 && activeAccount.txns.some(txn => txn >= amount * 0.1)) {
       activeAccount.txns.push(amount);
     }
@@ -214,7 +209,7 @@ btnLogin.addEventListener('click', function (e) {
 
     if (
       inputCloseUsername.value === activeAccount.username &&
-      +inputClosePin.value === activeAccount.pin
+      Number(inputClosePin.value) === activeAccount.pin
     ) {
       const currentIndex = accounts.findIndex(
         acct => acct.username === activeAccount.username
