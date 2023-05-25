@@ -192,7 +192,7 @@ btnLogin.addEventListener('click', function (e) {
   btnLoan.addEventListener('click', function (e) {
     e.preventDefault();
 
-    const amount = Number(inputLoanAmount.value);
+    const amount = Math.floor(inputLoanAmount.value);
     if (amount > 0 && activeAccount.txns.some(txn => txn >= amount * 0.1)) {
       activeAccount.txns.push(amount);
     }
