@@ -88,7 +88,7 @@ const displayTrxns = function (txns, sort = false) {
       <div class="txns__row">
         <div class="txns__type txns__type--${type}">${i + 1} ${type}</div>
         <div class="txns__date">24/01/2023</div>
-        <div class="txns__value">${txn}€</div>
+        <div class="txns__value">${txn.toFixed(2)}€</div>
       </div>
     `;
 
@@ -99,7 +99,7 @@ const displayTrxns = function (txns, sort = false) {
 
 const displayBalance = function (acct) {
   acct.balance = acct.txns.reduce((acc, txn) => acc + txn, 0);
-  labelBalance.textContent = `${acct.balance}€`;
+  labelBalance.textContent = `${acct.balance.toFixed(2)}€`;
 };
 
 // Calculate and display summaries
@@ -107,12 +107,12 @@ const displaySummaries = function (acct) {
   const totalIncome = acct.txns
     .filter(txn => txn > 0)
     .reduce((acc, deposit) => acc + deposit, 0);
-  labelSumIn.textContent = `${totalIncome}€`;
+  labelSumIn.textContent = `${totalIncome.toFixed(2)}€`;
 
   const totalOut = acct.txns
     .filter(txn => txn < 0)
     .reduce((acc, out) => acc + out, 0);
-  labelSumOut.textContent = `${Math.abs(totalOut)}€`;
+  labelSumOut.textContent = `${Math.abs(totalOut).toFixed(2)}€`;
 
   // Interest (1.2% of each deposit) - paid only if it is at least 1€
   const interest = acct.txns
@@ -120,7 +120,7 @@ const displaySummaries = function (acct) {
     .map(dep => (dep * acct.interstRate) / 100)
     .filter(int => int >= 1)
     .reduce((acc, int) => acc + int, 0);
-  labelSumInterest.textContent = `${interest}€`;
+  labelSumInterest.textContent = `${interest.toFixed(2)}€`;
 };
 
 // Create username property and add them account objects
