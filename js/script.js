@@ -149,6 +149,11 @@ updateUI(activeAccount);
 containerApp.style.opacity = 100;
 
 const now = new Date();
+const date = `${now.getDate()}`.padStart(2, 0);
+const month = `${now.getMonth()}`.padStart(2, 0);
+const year = now.getFullYear();
+const hour = `${now.getHours()}`.padStart(2, 0);
+const minute = `${now.getMinutes()}`.padStart(2, 0);
 
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault(); // prevent form from submitting
