@@ -148,6 +148,8 @@ activeAccount = account1;
 updateUI(activeAccount);
 containerApp.style.opacity = 100;
 
+const now = new Date();
+
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault(); // prevent form from submitting
 
