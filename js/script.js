@@ -203,6 +203,12 @@ btnLogin.addEventListener('click', function (e) {
     updateUI(activeAccount);
   });
 
+  // Request loan
+  btnLoan.addEventListener('click', function (e) {
+    e.preventDefault();
+    
+  });
+
   // Close account
   btnClose.addEventListener('click', function (e) {
     e.preventDefault();
