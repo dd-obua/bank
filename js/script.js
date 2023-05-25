@@ -136,9 +136,9 @@ const createUsernames = accs =>
 createUsernames(accounts);
 
 const updateUI = function (acct) {
-  displayTrxns(activeAccount.txns);
-  displayBalance(activeAccount);
-  displaySummaries(activeAccount);
+  displayTrxns(acct.txns);
+  displayBalance(acct);
+  displaySummaries(acct);
 };
 
 let activeAccount;
