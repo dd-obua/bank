@@ -155,6 +155,8 @@ const year = now.getFullYear();
 const hour = `${now.getHours()}`.padStart(2, 0);
 const minute = `${now.getMinutes()}`.padStart(2, 0);
 
+labelDate.textContent = `${date}/${month}/${year}, ${hour}:${minute}`;
+
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault(); // prevent form from submitting
 
