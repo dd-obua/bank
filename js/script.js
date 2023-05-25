@@ -143,6 +143,11 @@ const updateUI = function (acct) {
 
 let activeAccount;
 
+// Fake default login
+activeAccount = account1;
+updateUI(activeAccount);
+containerApp.style.opacity = 100;
+
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault(); // prevent form from submitting
 
