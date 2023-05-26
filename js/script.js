@@ -77,26 +77,7 @@ const account4 = {
   locale: 'pt-PT', // de-DE
 };
 
-const account5 = {
-  owner: 'Denis Daniel Obua',
-  txns: [450, 3000, -130, 1300],
-  interstRate: 1.8,
-  pin: 5555,
-  txnDates: [
-    '2019-11-18T21:31:17.178Z',
-    '2019-12-23T07:42:02.383Z',
-    '2020-01-28T09:15:04.904Z',
-    '2020-04-01T10:17:24.185Z',
-    '2020-05-08T14:11:59.604Z',
-    '2020-05-27T17:01:17.194Z',
-    '2020-07-11T23:36:17.929Z',
-    '2020-07-12T10:51:36.790Z',
-  ],
-  currency: 'EUR',
-  locale: 'pt-PT', // de-DE
-};
-
-const accounts = [account1, account2, account3, account4, account5];
+const accounts = [account1, account2, account3, account4];
 
 const select = selector => document.querySelector(selector);
 
