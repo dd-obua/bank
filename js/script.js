@@ -138,7 +138,7 @@ const formatTxnDate = function (date) {
   const calcDaysPassed = (date1, date2) =>
     Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
 
-  const daysPassed = calcDaysPassed(new Date(), date);
+  const daysPassed = calcDaysPassed(now, date);
 
   const day = `${date.getDate()}`.padStart(2, 0);
   const month = `${date.getMonth() + 1}`.padStart(2, 0);
@@ -266,9 +266,9 @@ btnLogin.addEventListener('click', function (e) {
       receipientAccount?.username !== activeAccount.username
     ) {
       activeAccount.txns.push(-amount);
-      activeAccount.txnDates.push(new Date().toISOString());
+      activeAccount.txnDates.push(now.toISOString());
       receipientAccount.txns.push(amount);
-      receipientAccount.txnDates.push(new Date().toISOString());
+      receipientAccount.txnDates.push(now.toISOString());
 
       updateUI(activeAccount);
     }
@@ -283,7 +283,7 @@ btnLogin.addEventListener('click', function (e) {
     const amount = Math.floor(inputLoanAmount.value);
     if (amount > 0 && activeAccount.txns.some(txn => txn >= amount * 0.1)) {
       activeAccount.txns.push(amount);
-      activeAccount.txnDates.push(new Date().toISOString());
+      activeAccount.txnDates.push(now.toISOString());
     }
 
     inputLoanAmount.value = '';
