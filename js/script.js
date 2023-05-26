@@ -161,12 +161,16 @@ const displaySummaries = function (acct) {
   const totalIncome = acct.txns
     .filter(txn => txn > 0)
     .reduce((acc, deposit) => acc + deposit, 0);
-  labelSumIn.textContent = `${totalIncome.toFixed(2)}€`;
+  labelSumIn.textContent = formatCurrency(
+    totalIncome,
+    acct.locale,
+    acct.currency
+  );
 
   const totalOut = acct.txns
     .filter(txn => txn < 0)
     .reduce((acc, out) => acc + out, 0);
-  labelSumOut.textContent = `${Math.abs(totalOut).toFixed(2)}€`;
+  labelSumOut.textContent = formatCurrency(totalOut.acct.locale, acct.currency);
 
   // Interest (1.2% of each deposit) - paid only if it is at least 1€
   const interest = acct.txns
@@ -174,7 +178,11 @@ const displaySummaries = function (acct) {
     .map(dep => (dep * acct.interstRate) / 100)
     .filter(int => int >= 1)
     .reduce((acc, int) => acc + int, 0);
-  labelSumInterest.textContent = `${interest.toFixed(2)}€`;
+  labelSumInterest.textContent = formatCurrency(
+    interest,
+    acct.locale,
+    acct.currency
+  );
 };
 
 // Create username property and add them account objects
