@@ -208,10 +208,11 @@ btnLogin.addEventListener('click', function (e) {
       year: 'numeric',
       weekday: 'long',
     };
-    const locale = navigator.language;
-    labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(
-      now
-    );
+    const locale = navigator.language; // browser locale
+    labelDate.textContent = new Intl.DateTimeFormat(
+      activeAccount.locale,
+      options
+    ).format(now);
 
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
