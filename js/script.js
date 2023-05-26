@@ -169,15 +169,6 @@ const updateUI = function (acct) {
 
 let activeAccount;
 
-const now = new Date();
-const date = `${now.getDate()}`.padStart(2, 0);
-const month = `${now.getMonth()}`.padStart(2, 0);
-const year = now.getFullYear();
-const hour = `${now.getHours()}`.padStart(2, 0);
-const minute = `${now.getMinutes()}`.padStart(2, 0);
-
-labelDate.textContent = `${date}/${month}/${year}, ${hour}:${minute}`;
-
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault(); // prevent form from submitting
 
@@ -189,6 +180,15 @@ btnLogin.addEventListener('click', function (e) {
     // Display welcome message and UI
     labelWelcome.textContent = `Welcome ${activeAccount.owner.split(' ')[0]}!`;
     containerApp.style.opacity = 100;
+
+    // Calculate and display date information
+    const now = new Date();
+    const date = `${now.getDate()}`.padStart(2, 0);
+    const month = `${now.getMonth()}`.padStart(2, 0);
+    const year = now.getFullYear();
+    const hour = `${now.getHours()}`.padStart(2, 0);
+    const minute = `${now.getMinutes()}`.padStart(2, 0);
+    labelDate.textContent = `${date}/${month}/${year}, ${hour}:${minute}`;
 
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
