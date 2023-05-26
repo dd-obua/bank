@@ -221,7 +221,9 @@ btnLogin.addEventListener('click', function (e) {
       receipientAccount?.username !== activeAccount.username
     ) {
       activeAccount.txns.push(-amount);
+      activeAccount.txnDates.push(new Date().toISOString());
       receipientAccount.txns.push(amount);
+      receipientAccount.txnDates.push(new Date().toISOString());
 
       updateUI(activeAccount);
     }
