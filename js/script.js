@@ -134,10 +134,9 @@ const currencies = new Map([
 
 const formatTxnDate = function (date) {
   const calcDaysPassed = (date1, date2) =>
-    Math.abs(date2 - date1) * (1000 * 60 * 60 * 24);
+    Math.round(Math.abs(date2 - date1) * (1000 * 60 * 60 * 24));
 
-  const dayPassed = calcDaysPassed(new Date() - date);
-  alert(dayPassed);
+  const daysPassed = calcDaysPassed(new Date() - date);
 
   const day = `${date.getDate()}`.padStart(2, 0);
   const month = `${date.getMonth() + 1}`.padStart(2, 0);
