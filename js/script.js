@@ -208,7 +208,7 @@ btnLogin.addEventListener('click', function (e) {
       year: 'numeric',
       weekday: 'long',
     };
-    const locale = navigator.language; // browser locale
+    const locale = navigator.language; // browser locale (not used)
     labelDate.textContent = new Intl.DateTimeFormat(
       activeAccount.locale,
       options
