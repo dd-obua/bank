@@ -110,6 +110,9 @@ const displayTrxns = function (acct, sort = false) {
     const type = txn > 0 ? 'deposit' : 'withdrawal';
 
     const txnDate = new Date(acct.txnDates[i]);
+    const date = `${txnDate.getDate()}`.padStart(2, 0);
+    const month = `${txnDate.getMonth() + 1}`.padStart(2, 0);
+    const year = `${txnDate.getFullYear()}`;
 
     // Generate transactions html
     const txnHtml = `
