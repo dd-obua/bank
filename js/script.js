@@ -132,6 +132,8 @@ const currencies = new Map([
   ['GBP', 'Pound Sterling'],
 ]);
 
+const now = new Date();
+
 const formatTxnDate = function (date) {
   const calcDaysPassed = (date1, date2) =>
     Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
@@ -232,7 +234,6 @@ btnLogin.addEventListener('click', function (e) {
     containerApp.style.opacity = 100;
 
     // Calculate and display date information
-    const now = new Date();
     const date = `${now.getDate()}`.padStart(2, 0);
     const month = `${now.getMonth()}`.padStart(2, 0);
     const year = now.getFullYear();
