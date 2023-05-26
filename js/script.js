@@ -109,6 +109,13 @@ const formatTxnDate = function (date, locale) {
   return new Intl.DateTimeFormat(locale).format(date);
 };
 
+const formatCurrency = function (value, locale, currency) {
+  return new Intl.NumberFormat(locale, {
+    style: 'currency',
+    currency: currency,
+  }).format(value);
+};
+
 // Display transactions
 const displayTrxns = function (acct, sort = false) {
   // Empty transactions container
