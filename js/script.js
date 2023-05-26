@@ -7,11 +7,11 @@ const account1 = {
   interstRate: 1.2, // 1.2%
   pin: 1111,
   txnDates: [
-    '2019-11-18T21:31:17.178Z',
-    '2019-12-23T07:42:02.383Z',
-    '2020-01-28T09:15:04.904Z',
-    '2020-04-01T10:17:24.185Z',
-    '2020-05-08T14:11:59.604Z',
+    '2020-11-18T21:31:17.178Z',
+    '2023-12-23T07:42:02.383Z',
+    '2023-01-28T09:15:04.904Z',
+    '2023-04-01T10:17:24.185Z',
+    '2023-05-08T14:11:59.604Z',
     '2023-05-20T04:01:17.194Z',
     '2023-05-25T12:36:17.929Z',
     '2023-05-26T10:51:36.790Z',
@@ -121,10 +121,15 @@ const formatTxnDate = function (date) {
 
   const daysPassed = calcDaysPassed(now, date);
 
-  const day = `${date.getDate()}`.padStart(2, 0);
-  const month = `${date.getMonth() + 1}`.padStart(2, 0);
-  const year = `${date.getFullYear()}`;
-  return `${day}/${month}/${year}`;
+  if (daysPassed === 0) return 'Today';
+  if (daysPassed === 1) return 'Yesterday';
+  if (daysPassed <= 7) return `${daysPassed} days ago`;
+  else {
+    const day = `${date.getDate()}`.padStart(2, 0);
+    const month = `${date.getMonth() + 1}`.padStart(2, 0);
+    const year = `${date.getFullYear()}`;
+    return `${day}/${month}/${year}`;
+  }
 };
 
 // Display transactions
