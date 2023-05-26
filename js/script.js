@@ -96,7 +96,7 @@ const currencies = new Map([
 
 const now = new Date();
 
-const formatTxnDate = function (date) {
+const formatTxnDate = function (date, locale) {
   const calcDaysPassed = (date1, date2) =>
     Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
 
