@@ -149,6 +149,11 @@ const displayTrxns = function (acct, sort = false) {
 const displayBalance = function (acct) {
   acct.balance = acct.txns.reduce((acc, txn) => acc + txn, 0);
   labelBalance.textContent = `${acct.balance.toFixed(2)}€`;
+  labelBalance.textContent = formatCurrency(
+    acct.balance,
+    acct.locale,
+    acct.currency
+  );
 };
 
 // Calculate and display summaries
