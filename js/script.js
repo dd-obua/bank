@@ -162,7 +162,7 @@ const createUsernames = accs =>
 createUsernames(accounts);
 
 const updateUI = function (acct) {
-  displayTrxns(acct.txns);
+  displayTrxns(acct);
   displayBalance(acct);
   displaySummaries(acct);
 };
