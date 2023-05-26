@@ -199,7 +199,19 @@ btnLogin.addEventListener('click', function (e) {
     labelWelcome.textContent = `Welcome ${activeAccount.owner.split(' ')[0]}!`;
     containerApp.style.opacity = 100;
 
-    // Calculate and display date information
+    // Calculate and display date information using Intl API
+    const options = {
+      hour: 'numeric',
+      minute: 'numeric',
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+      weekday: 'long',
+    };
+    const locale = navigator.language;
+    labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(
+      now
+    );
 
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
