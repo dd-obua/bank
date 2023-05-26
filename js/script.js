@@ -109,6 +109,8 @@ const displayTrxns = function (acct, sort = false) {
   transactions.forEach(function (txn, i) {
     const type = txn > 0 ? 'deposit' : 'withdrawal';
 
+    const txnDate = new Date(acct.txnDates[i]);
+
     // Generate transactions html
     const txnHtml = `
       <div class="txns__row">
