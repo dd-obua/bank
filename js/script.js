@@ -97,7 +97,7 @@ const account5 = {
 };
 
 const accounts = [account1, account2, account3, account4, account5];
-console.log(accounts);
+
 const select = selector => document.querySelector(selector);
 
 // Elements
