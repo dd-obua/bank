@@ -98,7 +98,7 @@ const currencies = new Map([
 ]);
 
 // Display transactions
-const displayTrxns = function (txns, sort = false) {
+const displayTrxns = function (acct, sort = false) {
   // Empty transactions container
   containerTxns.innerHTML = '';
 
