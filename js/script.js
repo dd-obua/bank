@@ -132,6 +132,13 @@ const currencies = new Map([
   ['GBP', 'Pound Sterling'],
 ]);
 
+const formatTxnDate = function (date) {
+  const day = `${date.getDate()}`.padStart(2, 0);
+  const month = `${date.getMonth() + 1}`.padStart(2, 0);
+  const year = `${date.getFullYear()}`;
+  return `${day}/${month}/${year}`;
+};
+
 // Display transactions
 const displayTrxns = function (acct, sort = false) {
   // Empty transactions container
@@ -145,10 +152,7 @@ const displayTrxns = function (acct, sort = false) {
     const type = txn > 0 ? 'deposit' : 'withdrawal';
 
     const txnDate = new Date(acct.txnDates[i]);
-    const date = `${txnDate.getDate()}`.padStart(2, 0);
-    const month = `${txnDate.getMonth() + 1}`.padStart(2, 0);
-    const year = `${txnDate.getFullYear()}`;
-    const dateStr = `${date}/${month}/${year}`;
+    const dateStr = formatTxnDate(txnDate);
 
     // Generate transactions html
     const txnHtml = `
