@@ -122,7 +122,7 @@ const displayTrxns = function (acct, sort = false) {
     const type = txn > 0 ? 'deposit' : 'withdrawal';
 
     const txnDate = new Date(acct.txnDates[i]);
-    const dateStr = formatTxnDate(txnDate);
+    const dateStr = formatTxnDate(txnDate, acct.locale);
 
     // Generate transactions html
     const txnHtml = `
