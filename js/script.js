@@ -130,10 +130,7 @@ const displayTrxns = function (acct, sort = false) {
 
     const txnDate = new Date(acct.txnDates[i]);
     const dateStr = formatTxnDate(txnDate, acct.locale);
-    const formattedTxn = new Intl.NumberFormat(acct.locale, {
-      style: 'currency',
-      currency: acct.currency,
-    }).format(txn);
+    const formattedTxn = formatCurrency(txn, acct.locale, acct.currency);
 
     // Generate transactions html
     const txnHtml = `
