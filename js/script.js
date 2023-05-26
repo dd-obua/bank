@@ -169,11 +169,6 @@ const updateUI = function (acct) {
 
 let activeAccount;
 
-// Fake default login
-activeAccount = account1;
-updateUI(activeAccount);
-containerApp.style.opacity = 100;
-
 const now = new Date();
 const date = `${now.getDate()}`.padStart(2, 0);
 const month = `${now.getMonth()}`.padStart(2, 0);
