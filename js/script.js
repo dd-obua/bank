@@ -248,7 +248,7 @@ btnLogin.addEventListener('click', function (e) {
 
     const amount = Number(inputTransferAmount.value);
     const receipientAccount = accounts.find(
-      acc => acc.username === inputTransferTo.value
+      acct => acct.username === inputTransferTo.value
     );
     inputTransferTo.value = inputTransferAmount.value = '';
 
