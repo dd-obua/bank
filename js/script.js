@@ -212,7 +212,7 @@ btnLogin.addEventListener('click', function (e) {
   e.preventDefault(); // prevent form from submitting
 
   activeAccount = accounts.find(
-    acc => acc.username === inputLoginUsername.value
+    acct => acct.username === inputLoginUsername.value
   );
 
   if (activeAccount?.pin === Number(inputLoginPin.value)) {
