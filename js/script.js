@@ -170,7 +170,11 @@ const displaySummaries = function (acct) {
   const totalOut = acct.txns
     .filter(txn => txn < 0)
     .reduce((acc, out) => acc + out, 0);
-  labelSumOut.textContent = formatCurrency(totalOut.acct.locale, acct.currency);
+  labelSumOut.textContent = formatCurrency(
+    totalOut,
+    acct.locale,
+    acct.currency
+  );
 
   // Interest (1.2% of each deposit) - paid only if it is at least 1€
   const interest = acct.txns
