@@ -190,8 +190,8 @@ const displaySummaries = function (acct) {
 };
 
 // Create username property and add them account objects
-const createUsernames = accs =>
-  accs.forEach(
+const createUsernames = accts =>
+  accts.forEach(
     acc =>
       (acc.username = acc.owner
         .toLowerCase()
