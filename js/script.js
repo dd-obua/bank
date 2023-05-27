@@ -276,9 +276,11 @@ btnLogin.addEventListener('click', function (e) {
 
     const amount = Math.floor(inputLoanAmount.value);
     if (amount > 0 && activeAccount.txns.some(txn => txn >= amount * 0.1)) {
-      activeAccount.txns.push(amount);
-      activeAccount.txnDates.push(now.toISOString());
-      updateUI(activeAccount);
+      setTimeout(() => {
+        activeAccount.txns.push(amount);
+        activeAccount.txnDates.push(now.toISOString());
+        updateUI(activeAccount);
+      }, 2500);
     }
 
     inputLoanAmount.value = '';
