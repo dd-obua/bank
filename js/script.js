@@ -207,7 +207,7 @@ const updateUI = function (acct) {
 };
 
 const startLogoutTimer = function () {
-  let time = 15;
+  let time = 600;
 
   const tick = function () {
     const min = String(Math.trunc(time / 60)).padStart(2, 0);
