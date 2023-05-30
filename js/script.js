@@ -347,6 +347,6 @@ let sorted = false;
 
 btnSort.addEventListener('click', function (e) {
   e.preventDefault();
-  displayTrxns(activeAccount.txns, !sorted);
+  displayTrxns(activeAccount, !sorted);
   sorted = !sorted;
 });
