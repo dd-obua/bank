@@ -225,9 +225,10 @@ const startLogoutTimer = function () {
 
   tick();
   const timer = setInterval(tick, 1000);
+  return timer;
 };
 
-let activeAccount;
+let activeAccount, timer;
 
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault(); // prevent form from submitting
@@ -260,7 +261,8 @@ btnLogin.addEventListener('click', function (e) {
     inputLoginUsername.value = inputLoginPin.value = '';
     inputLoginPin.blur();
 
-    startLogoutTimer();
+    if (timer) clearInterval(timer);
+    timer = startLogoutTimer();
     updateUI(activeAccount);
   }
 
