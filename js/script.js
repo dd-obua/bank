@@ -206,6 +206,27 @@ const updateUI = function (acct) {
   displaySummaries(acct);
 };
 
+const startLogoutTimer = function () {
+  let time = 15;
+
+  const tick = function () {
+    const min = String(Math.trunc(time / 60)).padStart(2, 0);
+    const sec = String(Math.trunc(time % 60)).padStart(2, 0);
+    labelTimer.textContent = `${min}:${sec}`;
+
+    if (time === 0) {
+      clearInterval(timer);
+      containerApp.style.opacity = 0;
+      labelWelcome.textContent = 'Logged out! Login to resume';
+    }
+
+    time--;
+  };
+
+  tick();
+  const timer = setInterval(tick, 1000);
+};
+
 let activeAccount;
 
 btnLogin.addEventListener('click', function (e) {
@@ -239,6 +260,7 @@ btnLogin.addEventListener('click', function (e) {
     inputLoginUsername.value = inputLoginPin.value = '';
     inputLoginPin.blur();
 
+    startLogoutTimer();
     updateUI(activeAccount);
   }
 
