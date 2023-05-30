@@ -292,6 +292,10 @@ btnLogin.addEventListener('click', function (e) {
     }
 
     inputTransferTo.value = inputTransferAmount.value = '';
+
+    // Reset timer
+    clearInterval(timer);
+    timer = startLogoutTimer();
   });
 
   // Take loan
@@ -309,6 +313,10 @@ btnLogin.addEventListener('click', function (e) {
 
     inputLoanAmount.value = '';
     inputLoanAmount.blur();
+
+    // Reset timer
+    clearInterval(timer);
+    timer = startLogoutTimer();
   });
 
   // Close account
